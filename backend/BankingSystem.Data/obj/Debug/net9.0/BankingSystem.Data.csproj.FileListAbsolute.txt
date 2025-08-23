@@ -1,0 +1,17 @@
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingSystem.Data.csproj.AssemblyReference.cache
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingSystem.Data.AssemblyInfoInputs.cache
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingSystem.Data.AssemblyInfo.cs
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingSystem.Data.csproj.CoreCompileInputs.cache
+/root/projects/banksys/backend/BankingSystem.Data/bin/Debug/net9.0/BankingSystem.Data.deps.json
+/root/projects/banksys/backend/BankingSystem.Data/bin/Debug/net9.0/BankingSystem.Data.dll
+/root/projects/banksys/backend/BankingSystem.Data/bin/Debug/net9.0/BankingSystem.Data.pdb
+/root/projects/banksys/backend/BankingSystem.Data/bin/Debug/net9.0/BankingSystem.Core.dll
+/root/projects/banksys/backend/BankingSystem.Data/bin/Debug/net9.0/BankingSystem.Core.pdb
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingS.6E835500.Up2Date
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingSystem.Data.dll
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/refint/BankingSystem.Data.dll
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/BankingSystem.Data.pdb
+/root/projects/banksys/backend/BankingSystem.Data/obj/Debug/net9.0/ref/BankingSystem.Data.dll
+/root/projects/banksys/backend/BankingSystem.Data/bin/Debug/net9.0/BankingSystem.Security.dll
+/root/projects/banksys/backend/BankingSystem.Data/bin/Debug/net9.0/BankingSystem.Security.pdb

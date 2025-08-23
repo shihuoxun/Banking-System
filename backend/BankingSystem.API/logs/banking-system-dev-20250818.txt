@@ -1,0 +1,3 @@
+[2025-08-18 13:20:00.174 +10:00 [INF] Configuring SQLite database for development environment <s:>
+[2025-08-18 13:22:44.746 +10:00 [INF] Configuring SQLite database for development environment <s:>
+[2025-08-18 13:23:16.137 +10:00 [INF] Configuring SQLite database for development environment <s:>

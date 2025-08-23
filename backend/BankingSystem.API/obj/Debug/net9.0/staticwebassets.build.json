@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ypFfWQs6h2UGR1l+2zbGdpfOc8oIDZYgIcqLUtckBdA=",
+  "Source": "BankingSystem.API",
+  "BasePath": "_content/BankingSystem.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

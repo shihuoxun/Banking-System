@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  # Banking API Service
+  banking-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: banking-system-api
+    ports:
+      - "5255:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__DefaultConnection=Host=banking-db;Database=bankingsystem;Username=banking_user;Password=${DB_PASSWORD:-SecureBankingPassword123!}
+      - JWT__SecretKey=${JWT_SECRET_KEY:-YourSuperSecureJWTSigningKeyForBankingSystemThatShouldBeAtLeast256BitsLong}
+      - JWT__Issuer=BankingSystemAPI
+      - JWT__Audience=BankingSystemUsers
+      - JWT__ExpiryInMinutes=60
+    volumes:
+      - banking_logs:/app/logs
+    restart: unless-stopped
+    depends_on:
+      banking-db:
+        condition: service_healthy
+    networks:
+      - banking-network
+
+  # PostgreSQL Database
+  banking-db:
+    image: postgres:16-alpine
+    container_name: banking-postgres
+    environment:
+      - POSTGRES_DB=bankingsystem
+      - POSTGRES_USER=banking_user
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-SecureBankingPassword123!}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U banking_user -d bankingsystem"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - banking-network
+
+  # Redis Cache
+  banking-cache:
+    image: redis:7-alpine
+    container_name: banking-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-SecureRedisPassword123!}
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - banking-network
+
+  # Nginx Reverse Proxy
+  banking-proxy:
+    image: nginx:alpine
+    container_name: banking-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - banking-api
+    restart: unless-stopped
+    networks:
+      - banking-network
+
+volumes:
+  banking_logs:
+    driver: local
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  banking-network:
+    driver: bridge

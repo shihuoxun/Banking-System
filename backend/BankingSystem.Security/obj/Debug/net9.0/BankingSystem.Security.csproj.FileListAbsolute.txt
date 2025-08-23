@@ -1,0 +1,12 @@
+/root/projects/banksys/backend/BankingSystem.Security/bin/Debug/net9.0/BankingSystem.Security.deps.json
+/root/projects/banksys/backend/BankingSystem.Security/bin/Debug/net9.0/BankingSystem.Security.dll
+/root/projects/banksys/backend/BankingSystem.Security/bin/Debug/net9.0/BankingSystem.Security.pdb
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/BankingSystem.Security.csproj.AssemblyReference.cache
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/BankingSystem.Security.GeneratedMSBuildEditorConfig.editorconfig
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/BankingSystem.Security.AssemblyInfoInputs.cache
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/BankingSystem.Security.AssemblyInfo.cs
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/BankingSystem.Security.csproj.CoreCompileInputs.cache
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/BankingSystem.Security.dll
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/refint/BankingSystem.Security.dll
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/BankingSystem.Security.pdb
+/root/projects/banksys/backend/BankingSystem.Security/obj/Debug/net9.0/ref/BankingSystem.Security.dll
